@@ -8,17 +8,18 @@
                 <span class="slidebar_header">Menu</span>
             </mat-toolbar>
             <mat-nav-list>
-                <ng-container *ngFor="let menuCategory of menuCategoryList; let i = index">
-                    <div mat-subheader class="menu-category" (click)="onMenuCategoryClick(i)"> {{menuCategory.name}}
-                    </div>
-                    <mat-expansion-panel class="expansion_panel" [expanded]=isPanelExpanded(i)>
-                        <a *ngFor="let menuItem of menuCategory.children" mat-list-item class="menu_itm" mat-subheader
-                            [routerLinkActive]="['mat_list_item_active']"
-                            [routerLink]="menuItem.routerLink">{{menuItem.name}}
-                            <mat-icon matListIcon class="nav-menu-icon">{{menuItem.icon}}</mat-icon>
-                        </a>
-                    </mat-expansion-panel>
-                </ng-container>
+                <mat-expansion-panel *ngFor="let menuCategory of menuCategoryList ; let i = index" #example >
+                    <mat-expansion-panel-header >
+                        <mat-panel-title>
+                            {{menuCategory.name}}
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <a *ngFor="let menuItem of menuCategory.children" mat-list-item class="menu_itm" mat-subheader
+                       [routerLinkActive]="['mat_list_item_active']"
+                       [routerLink]="menuItem.routerLink">{{menuItem.name}}
+                        <mat-icon matListIcon class="nav-menu-icon">{{menuItem.icon}}</mat-icon>
+                    </a>
+                </mat-expansion-panel>
             </mat-nav-list>
         </div>
     </mat-sidenav>

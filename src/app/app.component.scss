@@ -95,3 +95,14 @@ padding-left: .2em;}
 .mat-expansion-panel{
  margin-top: 5px;
 }
+
+.mat-expansion-panel-header {
+  flex-direction: row-reverse;
+}
+.mat-expansion-panel-header-title {
+  padding-left: 15px;
+}
+///deep/ .mat-expansion-indicator::after, .mat-expansion-panel-header-description {
+//  display: none !important;
+//
+//}
