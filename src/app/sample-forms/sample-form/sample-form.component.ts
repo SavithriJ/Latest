@@ -9,6 +9,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class SampleFormComponent {
     sampleForm: FormGroup;
     titleList = [];
+    stateList = [];
 
     constructor(private formBuilder: FormBuilder) {
         this.createDataSets();
@@ -22,16 +23,25 @@ export class SampleFormComponent {
             middleName: [''],
             lastName: ['', Validators.required],
             company: [''],
-            dob: ['']
+            date: [''],
+            address1: [''],
+            address2: [''],
+            state: [''],
+            city: ['']
         });
     }
 
     createDataSets() {
         this.titleList = this.getTitleList();
+        this.stateList = this.getStatesList();
     }
 
     getTitleList(): string[] {
         return ['Mr', 'Ms', 'Miss', 'Dr'];
+    }
+
+    getStatesList(): string[] {
+        return ['AL', 'AK', 'NY'];
     }
 
     onTitleChanged($event) {

@@ -4,6 +4,7 @@ import {SampleFormComponent} from './sample-form/sample-form.component';
 import {SampleFormsRoutingModule} from './sample-forms-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
+    MatAutocompleteModule,
     MatButtonModule,
     MatCardContent, MatCardModule, MatDatepickerModule,
     MatFormFieldModule,
@@ -26,7 +27,8 @@ import {
         MatSelectModule,
         MatCardModule,
         MatDatepickerModule,
-        MatNativeDateModule
+        MatNativeDateModule,
+        MatAutocompleteModule
     ]
 })
 export class SampleFormsModule {
