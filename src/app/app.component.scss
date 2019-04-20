@@ -61,9 +61,9 @@ padding-left: .2em;}
 //   padding-left: 25px;
 // }
 //-------------------------------
-// .mat-expansion-panel:not([class*='mat-elevation-z']) {
-//   box-shadow: none;
-// }
+ .mat-expansion-panel:not([class*='mat-elevation-z']) {
+   box-shadow: none;
+ }
 .mat-toolbar{
   background-color: $themePrimaryColor;
 }
