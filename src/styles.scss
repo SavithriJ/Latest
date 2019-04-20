@@ -1,0 +1,16 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif 'Montserrat';
+    font-size: 18px;
+}
+
+
+// theme setup - Royal blue
+
+.mat-toolbar.mat-primary {
+  // background: #ced0d3;
+  background: #106cc8;
+}

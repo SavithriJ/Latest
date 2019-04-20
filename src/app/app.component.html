@@ -1,0 +1,70 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true">
+        <div class="sidenav-inner">
+            <mat-toolbar>
+                <button mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon class="nav-menu-icon">menu</mat-icon>
+                </button>
+                <span class="slidebar_header">Menu</span>
+            </mat-toolbar>
+            <mat-nav-list>
+                <ng-container *ngFor="let menuCategory of menuCategoryList; let i = index">
+                    <div mat-subheader class="menu-category" (click)="onMenuCategoryClick(i)"> {{menuCategory.name}}
+                    </div>
+                    <mat-expansion-panel class="expansion_panel" [expanded]=isPanelExpanded(i)>
+                        <a *ngFor="let menuItem of menuCategory.children" mat-list-item class="menu_itm" mat-subheader
+                            [routerLinkActive]="['mat_list_item_active']"
+                            [routerLink]="menuItem.routerLink">{{menuItem.name}}
+                            <mat-icon matListIcon class="nav-menu-icon">{{menuItem.icon}}</mat-icon>
+                        </a>
+                    </mat-expansion-panel>
+                </ng-container>
+            </mat-nav-list>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Title</span>
+                <span class="spacer"></span>
+
+                <!-- <button mat-icon-button>
+                  <mat-icon>settings</mat-icon>
+                </button> -->
+                <mat-icon class="mat-icon-userAvatar" matBadge="9" [matBadgeHidden]="visible" matBadgeColor="warn">
+                    <button mat-mini-fab color="primary" [matMenuTriggerFor]="menu"></button>
+                </mat-icon>
+
+
+                <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button> -->
+
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>notification_important</mat-icon>
+                        <span>View Notifications</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>settings</mat-icon>
+                        <span>Settings</span>
+                    </button>
+
+                    <!-- <button mat-menu-item>
+                        <mat-icon>delete</mat-icon>
+                        <span>Delete</span>
+                    </button> -->
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item>
+                        <mat-icon>exit_to_app</mat-icon>
+                        <span>Sign Out</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

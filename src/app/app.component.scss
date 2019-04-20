@@ -1,0 +1,97 @@
+$themePrimaryColor:#106cc8;
+$menuCatagoryColor:#a5a5a5;
+$navMenuIconColor: #2d3946;
+$navMenuSelectionColor: #82a5ca;
+$navMenuHoverColor: #539be7;
+
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// .container .mat-drawer {
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   min-width: 200px;
+// }
+
+// .container .mat-drawer .mat-button {
+//   display: block;
+//   width: 100%;
+//   text-align: left;
+// }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-mini-fab{
+  background-image: url('https://experience.sap.com/fiori-design-web/wp-content/uploads/sites/5/2017/02/Avatar-Sizes-Custom-1.png');
+  background-size: cover;
+}
+
+
+.mat-icon-userAvatar{
+  width: 1.6em;
+  height: 1.6em;
+}
+
+// .mat-list-item{
+//   color: $themePrimaryColor;
+// }
+
+.slidebar_header{
+padding-left: .2em;}
+
+// ---------for Side Nav -------------
+// .sidenav-container {
+//   height: 100%;
+// }
+// .sidenav {
+//   width: 200px;
+// }
+// .sidenav-inner {
+
+// }
+// .sidenav-menu {
+//   margin-top: 30px;
+//   padding-left: 25px;
+// }
+//-------------------------------
+// .mat-expansion-panel:not([class*='mat-elevation-z']) {
+//   box-shadow: none;
+// }
+.mat-toolbar{
+  background-color: $themePrimaryColor;
+}
+// .expansion_panel
+// {
+//   padding: 0 2px 1px !important;
+// }
+.nav-menu-icon{
+   color: $navMenuIconColor;
+}
+.menu_itm{
+  font-weight:normal;
+}
+.menu_itm:hover {
+  // font-weight: bold;
+  background-color: $navMenuHoverColor;
+}
+
+  .mat_list_item_active {
+    background-color: $navMenuSelectionColor;
+}
+
+.menu-category{
+  border-radius: 2px;
+  background: $menuCatagoryColor;
+  border: solid 1px transparent;
+  margin-top: 5px;
+}
+.mat-expansion-panel{
+ margin-top: 5px;
+}
