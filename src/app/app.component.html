@@ -8,11 +8,12 @@
                 <span class="slidebar_header">Menu</span>
             </mat-toolbar>
             <mat-nav-list>
+                    <mat-divider></mat-divider>
                 <mat-expansion-panel *ngFor="let menuCategory of menuCategoryList ; let i = index"
-                                     (click)="onMenuCategoryClick(i)"
-                                     [expanded]=isPanelExpanded(i)  #exPanel >
-                    <mat-expansion-panel-header class="mat_title_header">
-                        <mat-panel-title >
+                                     [expanded]=menuCategory.expanded
+                                     #example >
+                    <mat-expansion-panel-header >
+                        <mat-panel-title>
                             {{menuCategory.name}}
                         </mat-panel-title>
                     </mat-expansion-panel-header>
@@ -21,9 +22,7 @@
                        [routerLink]="menuItem.routerLink">{{menuItem.name}}
                         <mat-icon matListIcon class="nav-menu-icon">{{menuItem.icon}}</mat-icon>
                     </a>
-                    <mat-divider></mat-divider>
                 </mat-expansion-panel>
-
             </mat-nav-list>
         </div>
     </mat-sidenav>

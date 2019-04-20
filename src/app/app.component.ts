@@ -11,6 +11,7 @@ export class AppComponent {
     menuCategoryList = [
         {
             name: 'Content',
+            expanded : true,
             children: [
                 {
                     name: 'Customer',
@@ -31,6 +32,7 @@ export class AppComponent {
         },
         {
             name: 'Report',
+            expanded : false,
             children: [
                 {
                     name: 'Sales',
