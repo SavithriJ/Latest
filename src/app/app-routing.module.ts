@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: './messages/messages.module#MessagesModule'
   },
   {
+    path: 'forms',
+    loadChildren: './forms/forms.module#FormsModule'
+  },
+  {
     path:'',
     redirectTo:'',
     pathMatch:'full'
