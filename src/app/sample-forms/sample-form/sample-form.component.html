@@ -1,0 +1,64 @@
+<mat-card>
+    <form [formGroup]="sampleForm">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="row">
+                    <mat-form-field  class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <mat-select
+                                formControlName="title"
+                                [placeholder]="'Title'"
+                                required>
+                            <mat-option
+                                    (onSelectionChange)="onTitleChanged($event)"
+                                    *ngFor="let title of titleList" [value]="title">
+                                {{title}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field  class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <input
+                                matInput
+                                formControlName="firstName"
+                                [placeholder]="'First Name'">
+                    </mat-form-field>
+                </div>
+                </div>
+                <mat-form-field class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <input
+                            matInput
+                            formControlName="middle"
+                            [placeholder]="'Middle Name'">
+                </mat-form-field>
+                <mat-form-field class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <input matInput
+                           formControlName="lastName"
+                           [placeholder]="'Last Name'">
+                </mat-form-field>
+
+
+                    <mat-form-field class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+                        <input
+                            #dateInput
+                            matInput
+                            [matDatepicker]="picker"
+                            [placeholder]="'Date of Birth'"
+                            formControlName="dob">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+
+            </div>
+            <div class="row">
+                <mat-form-field class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
+                    <input matInput
+                           disabled
+                           formControlName="company"
+                           [placeholder]="'Company'">
+                </mat-form-field>
+
+            </div>
+
+    </form>
+
+</mat-card>
