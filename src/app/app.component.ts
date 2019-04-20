@@ -50,4 +50,17 @@ export class AppComponent {
             ]
         }
     ];
+
+
+    isPanelExpanded(index) {
+        if (this.selectedIndex === index) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    onMenuCategoryClick(selectedIndex) {
+        this.selectedIndex = selectedIndex;
+    }
 }

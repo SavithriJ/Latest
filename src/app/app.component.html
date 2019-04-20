@@ -8,7 +8,9 @@
                 <span class="slidebar_header">Menu</span>
             </mat-toolbar>
             <mat-nav-list>
-                <mat-expansion-panel *ngFor="let menuCategory of menuCategoryList ; let i = index" #example >
+                <mat-expansion-panel *ngFor="let menuCategory of menuCategoryList ; let i = index"
+                                     (click)="onMenuCategoryClick(i)"
+                                     [expanded]=isPanelExpanded(i)  #exPanel >
                     <mat-expansion-panel-header >
                         <mat-panel-title>
                             {{menuCategory.name}}
