@@ -6,11 +6,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
     MatAutocompleteModule,
     MatButtonModule,
-    MatCardContent, MatCardModule, MatDatepickerModule,
+    MatCardContent, MatCardModule, MatCheckboxModule, MatDatepickerModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule, MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule, MatSlideToggleModule
 } from '@angular/material';
 
 @NgModule({
@@ -28,7 +28,9 @@ import {
         MatCardModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatAutocompleteModule
+        MatAutocompleteModule,
+        MatCheckboxModule,
+        MatSlideToggleModule
     ]
 })
 export class SampleFormsModule {
