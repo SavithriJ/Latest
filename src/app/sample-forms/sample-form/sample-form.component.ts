@@ -27,7 +27,10 @@ export class SampleFormComponent {
             address1: [''],
             address2: [''],
             state: [''],
-            city: ['']
+            city: [''],
+            postalcode: [''],
+            termsAndConCheckBox: [''],
+            emailSubscriptions: []
         });
     }
 

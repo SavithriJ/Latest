@@ -26,6 +26,7 @@
             </mat-form-field>
         </div>
         <div class="row">
+
             <mat-form-field class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                 <input matInput
                        formControlName="company"
@@ -84,6 +85,18 @@
                        formControlName="postalcode"
                        [placeholder]="'Postal Code'">
             </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-checkbox class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                          formControlName="termsAndConCheckBox">I accept the terms of service.
+            </mat-checkbox>
+        </div>
+        <div class="row">
+            <mat-slide-toggle
+                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+                    formControlName="emailSubscriptions">Enable email subscriptions
+            </mat-slide-toggle>
         </div>
     </form>
 
